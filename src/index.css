@@ -17,10 +17,11 @@ body {
 }
 
 .App {
-    display: flex;
+    display: flex; /*способность гибкого элемента растягиваться или сжиматься*/
     min-height: 100vh;
     align-items: center;
-    justify-content: center;
+    justify-content: center;/*Определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера*/
+    padding: 16px;/*внутренние отступы/поля со всех сторон элемента*/
 }
 
 .calculator {
@@ -28,7 +29,7 @@ body {
     max-width: 400px;
     background-color: #fff;
     border-radius: 16px;
-    overflow: hidden;
+    overflow: hidden; /* управляет отображением содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров.*/
     box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
 }
 
@@ -47,18 +48,18 @@ body {
 }
 
 button {
-    appearance: none;
+    appearance: none;/*отображения элемента с помощью использования платформенно-зависимого оформления на основе темы операционной системы пользователя*/
     border: none;
-    outline: none;
+    outline: none;/*задаёт дополнительную рамку вокруг элемента, за пределами его CSS-блока*/
     color: #FFF;
     font-size: 20px;
     padding: 16px;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.4s;/*способ контролировать скорость анимации*/
 }
 
 button:hover {
-    opacity: 0.9;
+    opacity: 0.9; /*непрозрачность элемента*/
 }
 
 .operators {
