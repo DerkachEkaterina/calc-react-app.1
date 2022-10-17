@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-
+/*Хук useState - это функция, которая используется для хранения состояния в функциональном компоненте.
+Он принимает аргумент как начальное значение состояния и возвращает массив с 2 элементами.
+Первый элемент - это текущее значение состояния. Второй элемент - это функция обновления состояния.*/
 
 
 function App() {
@@ -13,7 +15,8 @@ function App() {
   const updateCalc = value => {
     if(
         ops.includes(value) && calc === '' ||
-        ops.includes(value) && ops.includes(calc.slice(-1))
+        ops.includes(value) && ops.includes(calc.slice(-1))/*возвращает новый массив, содержащий копию части исходного массива.
+        в данном случае вытянет последний элемент*/
     ){
       return;
     }
@@ -48,7 +51,7 @@ function App() {
   }
 
   const calculate = () => {
-    setCalc(eval(calc).toString());
+    setCalc(eval(calc).toString()); /*выполняет JavaScript-код, представленный строкой.*/
   }
 
   return (
@@ -56,6 +59,8 @@ function App() {
       <div className="calculator">
         <div className="display">
           {result ? <span>({result})</span> : ''}&nbsp;
+          /*это общий встроенный контейнер для фразового содержимого, который по своей сути ничего не представляет
+          nbsp - это неразрывный пробел*/
           {calc || "0"}
         </div>
         <div className="operators">
